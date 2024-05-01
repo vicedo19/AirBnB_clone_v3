@@ -63,4 +63,5 @@ def put_amenity(amenity_id):
         if attr not in ['id', 'created_at', 'updated_at']:
             setattr(amenity, attr, val)
     amenity.save()
+
     return jsonify(amenity.to_dict())

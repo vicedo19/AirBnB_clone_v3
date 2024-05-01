@@ -81,4 +81,5 @@ def put_review(review_id):
                         'created_at', 'updated_at']:
             setattr(review, attr, val)
     review.save()
+
     return jsonify(review.to_dict())

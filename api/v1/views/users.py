@@ -65,4 +65,5 @@ def put_user(user_id):
         if attr not in ['id', 'email', 'created_at', 'updated_at']:
             setattr(user, attr, val)
     user.save()
+
     return jsonify(user.to_dict())
